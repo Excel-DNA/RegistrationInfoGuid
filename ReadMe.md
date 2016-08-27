@@ -1,7 +1,7 @@
 # RegistrationInfo Guid Sample
 
 The Excel-DNA IntelliSense extension will attempt to find registration info for any .xll add-in loaded.
-Discovery of the registration info is by calling a hidden function called "RegistrationInfo_<XllGuid>", where "<XllGuid>" is a guid computed from the full path of the xll.
+Discovery of the registration info is by calling a hidden function called "RegistrationInfo_\<XllGuid\>", where "\<XllGuid\>" is a guid computed from the full path of the xll.
 This project shows how to compute this Guid.
 
 ## RegistrationInfo registration
