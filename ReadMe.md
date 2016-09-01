@@ -37,7 +37,7 @@ Any missing entries in the array should be returned as `xlEmpty`.
 
 ## Acknowledgements
 
-The GuidUtility code used in Excel-DNA to generate the version 5 Guid is from https://github.com/LogosBible/Logos.Utility/blob/master/src/Logos.Utility/GuidUtility.cs
+The original GuidUtility code used in Excel-DNA to generate the version 5 Guid is from https://github.com/LogosBible/Logos.Utility/blob/master/src/Logos.Utility/GuidUtility.cs
 
-The SHA1 code in this project is from https://github.com/Spl3en/Crypto
+The SHA-1 code in this project is from https://www.packetizer.com/security/sha1/
 
