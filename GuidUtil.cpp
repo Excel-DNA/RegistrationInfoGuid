@@ -1,6 +1,6 @@
 #include "stdafx.h"
-#include "sha1.h"
 #include "GuidUtil.h"
+#include "sha1\\sha1.h"
 
 #define byte unsigned char
 
@@ -32,16 +32,17 @@ byte* CreateGuid(byte* nameSpaceGuid, byte* name, unsigned int nameLength)
 {
 	SwapByteOrder(nameSpaceGuid);
 
-	SHA1Context c;
-	SHA1Reset(&c);
-	SHA1Input(&c, nameSpaceGuid, 16);
-	SHA1Input(&c, name, nameLength);
-	int resultOK = SHA1Result(&c);
-	unsigned int * hash = c.Message_Digest;	// uint[5]
+	unsigned int hash[5];
+
+	SHA1 c;
+	c.Reset();
+	c.Input(nameSpaceGuid, 16);
+	c.Input(name, nameLength);
+	int resultOK = c.Result(hash);
 
 	byte newGuid[16];
 	for (int i = 0; i < 4; i++)
-		CopyIntToBytes(c.Message_Digest[i], newGuid, i * 4);
+		CopyIntToBytes(hash[i], newGuid, i * 4);
 
 	// set the four most significant bits (bits 12 through 15) of the time_hi_and_version field to the appropriate 4-bit version number
 	int version = 5; // for SHA - 1 hashing

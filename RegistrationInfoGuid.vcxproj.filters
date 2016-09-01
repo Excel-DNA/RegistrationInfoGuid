@@ -24,7 +24,7 @@
     <ClInclude Include="GuidUtil.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="sha1.h">
+    <ClInclude Include="sha1\sha1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -38,7 +38,7 @@
     <ClCompile Include="GuidUtil.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="sha1.cpp">
+    <ClCompile Include="sha1\sha1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
